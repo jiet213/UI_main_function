@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>data</title>
+</head>
+<body>
+	<button id="btn1">aaaa</button>
+	<button id="btn2">bbb</button>
+	<script type="text/javascript">
+	var baby = (function() {
+		var data = [];
+
+		function setData(arr) {
+			data = data.concat(arr);
+			console.log(data);
+		}
+
+		function getData(index) {
+			return data[index];
+		}
+		function doTpl(index)  {
+
+		}
+
+		return {
+			getData:getData,
+			setData:setData,
+			doTpl:doTpl
+		}
+	})();
+
+	window.onload = function() {
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+
+		(function(){
+			var tmp =[];
+			var json1 = {
+				name:'aaa',
+				age:11,
+				sex:1
+			};
+			var json2 = {
+				name:'bbb',
+				age:222,
+				sex:2
+			};
+			var json3 = {
+				name:'ccc',
+				age:333,
+				sex:3
+			};
+
+			tmp.push(json1);
+			tmp.push(json2);
+			tmp.push(json3);
+
+			baby.setData(tmp);
+		})();
+
+		btn1.onclick = function() {
+		}
+
+		btn2.onclick = function() {
+			console.log(baby.getData(1));
+		}
+	}
+
+	/*$.ajax({
+		url:'..',
+		success: function(data) {
+			var ret = {};
+			ret.baby = [];
+			ret.baby.push(data.rows)
+			baby.doTpl(ret);
+		}
+	})*/
+	</script>
+</body>
+</html>

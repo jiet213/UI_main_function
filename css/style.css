@@ -1,0 +1,438 @@
+ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding-left: 50px;
+}
+.hr_15 {
+    width: 100%;
+    height: 15px;
+}
+.hr_25 {
+    width: 100%;
+    height: 25px;
+}
+.separate {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #777;
+    padding: 10px 10px 10px 30px;
+}
+/* slide样式 */
+
+.lb_banner {
+    width: 770px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.lb_banner .imgBox {
+    width: 770px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.lb_banner .imgBox ul {
+    width: 3850px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lb_banner .imgBox li {
+    float: left;
+}
+.lb_banner .imgBox li img {
+    width: 770px;
+    height: 300px;
+    display: inline-block;
+}
+.lb_banner .slide_nav {
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    text-align: center;
+}
+.lb_banner .slide_nav a {
+    width: 20px;
+    height: 5px;
+    overflow: hidden;
+    display: inline-block;
+    background-color: #FFF;
+    margin: 0 3px;
+}
+.lb_banner .slide_nav .active {
+    background-color: #FF7700;
+}
+.lb_banner a.fnbtn {
+    width: 36px;
+    height: 36px;
+    background-color: #000;
+    display: inline-block;
+    position: absolute;
+    top: 132px;
+    outline: none;
+}
+.lb_banner a.fnbtn i {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+}
+.lb_banner a.left_control {
+    left: 10px;
+    opacity: 0.5;
+}
+.lb_banner a.left_control i {
+    background: url(../images/circle.fw.png) 0 -12px no-repeat;
+}
+.lb_banner a.right_control {
+    right: 10px;
+    opacity: 0.5;
+}
+.lb_banner a.right_control i {
+    background: url(../images/circle.fw.png) -45px 0 no-repeat;
+}
+/* tab样式 */
+
+.tab {
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+.tab_nav {
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.tab_nav li {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+}
+.tab_nav li a {
+    background: #f7f7f7;
+    border-right: 1px solid #ddd;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+}
+.tab_nav .last a {
+    border-right: 0;
+}
+.tab_nav .active a {
+    background: #fff;
+    border-bottom: 0;
+    color: #f22e00;
+}
+.tab_content {
+    width: 398px;
+    overflow: hidden;
+}
+.tab_content .ui_panel {
+    font-size: 18px;
+    padding: 25px 20px;
+    display: none;
+}
+/* 手风琴样式 */
+
+.accordion {
+    width: 150px;
+    height: auto;
+    margin: 20px auto;
+}
+.accordion .menu_head {
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    margin: 1px;
+    font-weight: bold;
+    background: #eef4d3;
+}
+.accordion .menu_body {
+    display: none;
+}
+.accordion .menu_body a {
+    display: block;
+    color: #006699;
+    background-color: #EFEFEF;
+    padding-left: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.accordion .menu_body a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+/* 弹出层样式 */
+
+.popover_main {
+    padding: 20px 50px;
+}
+.popover_main a {
+    font-size: 14px;
+    color: #e32669;
+    text-decoration: none;
+}
+.popUp {
+    width: 100%;
+    height: 100%;
+    background: url("../images/pop_up_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    display: none;
+}
+.popUp .pop_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: url("../images/pop_up_bg.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 5px;
+}
+.popUp .main {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.popUp .pop_title {
+    /* height: 20%; 
+    line-height: 35px;*/
+    
+    background: none repeat scroll 0 0 #f6f6f6;
+    position: relative;
+    margin-bottom: 48px;
+    font-family: Arial, "Microsoft Yahei", sans-serif;
+}
+.popUp .pop_title h3 {
+    font-size: 12px;
+    margin-left: 10px;
+}
+.popUp .pop_title .close {
+    position: absolute;
+    right: 11px;
+    top: 0;
+    font-style: normal;
+    color: #999;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+.popUp .pop_title .close:hover {
+    color: #757575;
+}
+.popUp .pop_container {
+    height: 80%;
+    padding-left: 35px;
+}
+/* 警告框样式 */
+
+.fn-alert {
+    width: 500px;
+    padding: 10px;
+    background: #0e90d2;
+    color: #ffffff;
+    border: 1px solid #0c7cb5;
+    border-radius: 0;
+    font-size: 14px;
+    position: relative;
+    font-family: "Microsoft Yahei", Helvetica, sans-serif;
+}
+.fn-alert .fn-close {
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000000;
+    opacity: .4;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    cursor: pointer;
+}
+.fn-alert-success {
+    background-color: #5eb95e;
+    border-color: #4bad4b;
+}
+.fn-alert-warning {
+    background-color: #f37b1d;
+    border-color: #e56c0c;
+}
+.fn-alert-danger {
+    background-color: #dd514c;
+    border-color: #d83832;
+}
+/* 按钮交互样式 */
+
+.fn-btn {
+    display: inline-block;
+    padding: 0.625em 1em;
+    vertical-align: middle;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-family: "Microsoft Yahei", Helvetica, sans-serif;
+}
+.fn-btn-primary {
+    color: #ffffff;
+    background-color: #0e90d2;
+    border-color: #0e90d2;
+}
+.fn-btn-primary:hover {
+    background-color: #0a6999;
+}
+.fn-btn-load {
+    background-color: #A7DDF9;
+    border-color: #A7DDF9;
+}
+/* 侧边栏 */
+
+.fn-offcanvas {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    
+    bottom: 0;
+    left: 0;
+    z-index: 1090;
+    background: rgba(0, 0, 0, 0.15);
+}
+.fn-offcanvas-bar {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1091;
+    background: #333333;
+}
+.fn-offcanvas-content {
+    padding: 15px;
+    color: #999;
+}
+.fn-offcanvas-content p {
+    font-size: 14px;
+    font-family: "Microsoft Yahei", Helvetica, sans-serif;
+}
+/* 固定元素 */
+
+.fn-sticky {
+    width: 1000px;
+}
+.fn-btn-sticky {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+/* 回到顶部 */
+
+#fn_Back2top {
+    width: 38px;
+    height: 38px;
+    background: url(../images/to-top.png) no-repeat;
+    position: fixed;
+    right: 12px;
+    bottom: 20px;
+    z-index: 2000;
+    cursor: pointer;
+    display: none;
+}
+#fn_Back2top:hover {
+    background: url(../images/to-top-hover.png) no-repeat;
+}
+/* tooltip效果 */
+
+#tooltip_demo {
+    width: 500px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 4px solid #CBCBCB;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: "Microsoft YaHei", "微软雅黑";
+}
+.tooltip {
+    color: #0099FF;
+    cursor: help;
+}
+.tooltip-box {
+    display: block;
+    background: #fff;
+    line-height: 1.6;
+    border: 1px solid #66CCFF;
+    color: #333;
+    padding: 20px;
+    font-size: 12px;
+    border-radius: 5px;
+    overflow: auto;
+    z-index: 999999;
+}
+
+/* 图片放大效果 */
+.zoom_in {
+    margin-top: 150px;
+}
+.zoom_in .zoom_container {/* 图片容器的大小为正常图片大小的一半 */
+    width: 400px;
+    height: 400px;
+    position: relative;
+    float: left;
+}
+.zoom_in .zoom_container a.imgBox {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    overflow: hidden;
+}
+.zoom_in .zoom_container a.imgBox img {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+}
+.zoom_in .zoom_container .zoomS_window {/*局部放大框的大小为放大后显示框的大小的一半*/
+    width: 240px;
+    height: 240px;
+    display: none;
+    float: right;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgb(238, 238, 238);
+    cursor: pointer;
+    background: rgb(0, 0, 0);
+    opacity: 0.4;
+    z-index: 99;
+    zoom:1;
+}
+.zoom_in .zoomB_window {
+    width: 480px;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+.zoom_in .zoomB_window .zoomB_img {
+    width: 480px;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid rgb(241, 241, 241);
+    background: url("../images/example.jpg") 0 0 no-repeat;
+}
+
+

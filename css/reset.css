@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: none;
+}
+body {
+    font-size: 12px;
+}
+li {
+    list-style: none;
+}
+button, input, select, textarea {
+    outline: none;
+    border: none;
+    background: none;
+}
+textarea {
+    resize: none;
+}
+a {
+    text-decoration: none;
+    color: #656565;
+}
+/*清浮动*/
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+    clear: both;
+}
+/*解决ie6下被固定定位的元素在滚动滚动条的时候会出现闪动的问题*/
+
+* html, * html body {
+    /* 只有IE6支持 */
+
+    background-image: url(about:blank);
+    /* 使用空背景 */
+
+    background-attachment: fixed;
+    /* 固定背景 */
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jsUI</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <p class="separate">1.返回底部</p>
+    <button class="fn-btn fn-btn-primary Back2bottom">滚动到底部</button>
+    <p class="separate">2.固定元素</p>
+    <div class="fn-sticky">
+        <button class="fn-btn fn-btn-primary fn-btn-sticky">固定在顶部</button>
+    </div>
+    <p class="separate">3.tab标签</p>
+    <div class="tab">
+        <ul class="tab_nav">
+            <li class="active"><a href="javascript:;">手机家电</a>
+            </li>
+            <li><a href="javascript:;">食品饮料</a>
+            </li>
+            <li><a href="javascript:;">流行服饰</a>
+            </li>
+            <li class="last"><a href="javascript:void(0);">日用百货</a>
+            </li>
+        </ul>
+        <div class="tab_content">
+            <div class="ui_panel" style="display: block;">
+                手机家电
+            </div>
+            <div class="ui_panel">
+                食品饮料
+            </div>
+            <div class="ui_panel">
+                流行服饰
+            </div>
+            <div class="ui_panel">
+                日用百货
+            </div>
+        </div>
+    </div>
+    <p class="separate">4.弹出层</p>
+    <div class="popover_main">
+        <a class="popover_targetE" href="javascript:void(0)">点击我</a>
+    </div>
+    <div class="popUp">
+        <div class="pop_body">
+            <div class="main">
+                <div class="pop_title">
+                    <h3>温馨提示</h3>
+                    <i class="close" data-x="1">X</i>
+                </div>
+                <div class="pop_container">
+                    内容区域
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="separate">5.警告框</p>
+    <div class="fn-alert fn-alert-success">
+        <button type="button" class="fn-close">&times;</button>
+        <p>Success</p>
+    </div>
+    <div class="hr_15"></div>
+    <div class="fn-alert fn-alert-warning">
+        <button type="button" class="fn-close">&times;</button>
+        <p>Warning</p>
+    </div>
+    <div class="hr_15"></div>
+    <div class="fn-alert fn-alert-danger">
+        <button type="button" class="fn-close">&times;</button>
+        <p>Danger</p>
+    </div>
+    <p class="separate">6.按钮交互</p>
+    <input type="button" class="fn-btn fn-btn-primary fn-button" value="提交 - Input元素" />
+    <input type="button" class="fn-btn fn-btn-primary fn-btn-other" value="提交 - Input元素" />
+    <p class="separate">7.侧边栏</p>
+    <!-- 链接触发器， href 属性为目标元素 ID -->
+    <div class="popover_main">
+        <a class="offcanvas_targetE" href="javascript:void(0)">点击显示侧边栏</a>
+    </div>
+    <!-- 侧边栏内容 -->
+    <div class="fn-offcanvas">
+        <div class="fn-offcanvas-bar">
+            <div class="fn-offcanvas-content">
+                <p>
+                    我不愿让你一个人
+                    <br/> 承受这世界的残忍
+                    <br/> 我不愿眼泪陪你到 永恒
+                </p>
+            </div>
+        </div>
+    </div>
+    <p class="separate">8.slide轮播</p>
+    <div class="lb_banner" id="lb_wrap">
+        <div class="imgBox">
+            <ul id="slide_wrap">
+                <li>
+                    <a href=""><img src="images/1.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/2.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/3.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/4.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/5.jpg">
+                    </a>
+                </li>
+                <li>
+                    <a href=""><img src="images/3.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="slide_nav" id="list">
+            <a href="#" class="active"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <a class="fnbtn right_control" href="javascript:;"><i></i></a>
+        <a class="fnbtn left_control" href="javascript:;"><i></i></a>
+    </div>
+    <p class="separate">9.tooltip效果</p>
+    <div id="tooltip_demo">
+        <p>ToolTip效果是非常常见的网页特效，它可以在用户将指针放置在控件上时为用户显示提示信息。 比如简称文字显示一行文字全称，例：
+            <a class="tooltip" id="tooltip1">中国</a>， <a class="tooltip" id="tooltip2">NBA</a>。 又比如显示一段文字，例：唐诗三百首中的
+            <a class="tooltip" id="tooltip3">春晓 </a>你会么？如果不看tooltip提示你背不出来的话，那么你 可要加油了。
+        </p>
+
+        <p>
+            ToolTip效果还可以用来显示图片，例：<a class="tooltip" id="tooltip4">西湖美景</a>。当然显示一块儿带格式的内容也不在话下，例：
+            <a class="tooltip" id="tooltip5">我的资料</a>。
+        </p>
+
+        <p>
+            注意好的ToolTip需要考虑样式、效果、页面的边界等信息，希望你可以做出更漂亮的ToolTip效果。
+        </p>
+    </div>
+    <p class="separate">10.返回顶部</p>
+    <button class="fn-btn fn-btn-primary smoothScroll">滚动到顶部</button>
+
+
+    <!-- 回到顶部 -->
+    <div id="fn_Back2top"></div>
+
+    <script type="text/javascript" src="./js/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="./js/act.js"></script>
+    <script type="text/javascript" src="./js/tooltip.js"></script>
+</body>
+
+</html>
