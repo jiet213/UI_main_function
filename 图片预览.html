@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片预览效果</title>
+	<style type="text/css">
+		div,ul,li,a,img {
+			padding: 0;
+			margin: 0;
+		}
+		ul,li {
+			list-style: none;
+		}
+		.main {
+
+		}
+		.main li {
+			float:left;
+			margin: 0  10px;
+			padding-left: 1px;
+			width:199px;
+			height:125px;
+		}
+		.main li a, .main li img {
+			display:inline-block;
+			width:199px;
+			height:125px;
+		}
+		.tooltip {
+			width:399px;
+			height:262px;
+			border: 1px solid #893aaf;
+		}
+		.tooltip img {
+			display:block;
+		}
+		.tooltip span {
+			height:12px;
+			line-height:12px;
+			display:block;
+			background-color : #333;
+			color: #fff;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<ul>
+			<li>
+				<a class="original" href="#" alt="" title="年终省钱大行动">
+					<img data-big = "images/11.jpg" src="images/11.jpg" alt="年终省钱大行动" title="">
+				</a>
+			</li>
+			<li>
+				<a class="original" href="#" alt="" title="冬季粮油大屯货">
+					<img data-big = "images/22.jpg" src="images/22.jpg" alt="冬季粮油大屯货" title="">
+				</a>
+			</li>
+			<li>
+				<a class="original" href="#" alt="" title="每户大牌钜惠">
+					<img data-big = "images/33.jpg" src="images/33.jpg" alt="每户大牌钜惠" title="">
+				</a>
+			</li>
+			<li>
+				<a class="original" href="#" alt="" title="12.12年终盛典">
+					<img data-big = "images/44.jpg" src="images/44.jpg" alt="12.12年终盛典" title="">
+				</a>
+			</li>
+			<li>
+				<a class="original" href="#" alt="" title="几折才算有诚意">
+					<img data-big = "images/55.jpg" src="images/55.jpg" alt="几折才算有诚意" title="">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var x = 20,
+				y = 20,
+				$orig = $("a.original");
+
+			$orig.on({
+
+				mouseover:function(){
+
+					var $orig_img = $(this).children("img"),
+
+						tooltip = $("<div class='tooltip'><img src="+$orig_img.attr('data-big')+">"+"<span>"+$orig_img.attr('alt')+"</div>"),
+
+						event = event||window.event;
+
+					//将提示框加到body里
+					$("body").append(tooltip);
+
+					//提示框的位置
+					$(".tooltip").css({
+						"position": "absolute",
+						"top": (event.pageY + y) + "px",
+						"left": (event.pageX + x) + "px"
+					});
+
+				},
+				mouseout:function(){
+
+					$(".tooltip").remove();
+
+				},
+				mousemove:function(){
+
+					var event = event||window.event;
+
+					$(".tooltip").css({
+						"position": "absolute",
+						"top": (event.pageY + y) + "px",
+						"left": (event.pageX + x) + "px"
+					});
+				}
+			});
+		})
+	</script>
+</body>
+</html>
