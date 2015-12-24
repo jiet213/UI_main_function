@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkedAll</title>
+</head>
+<body>
+	<div>
+		<form action="">
+			<input type="checkbox" id="checkedAll">全选\全不选</br>
+			<input type="checkbox" name="items" value="足球">足球
+			<input type="checkbox" name="items" value="篮球">篮球
+			<input type="checkbox" name="items" value="羽毛球">羽毛球
+			<input type="checkbox" name="items" value="排球">排球
+			<input type="checkbox" name="color" value="红色">红色
+			<input type="button" id="send" value="提交">
+		</form>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			//根据全选来控制所有符合条件的复选框选中状态
+			$("#checkedAll").on('click', function(event) {
+
+				var check = $(this).prop("checked");
+
+				$("[name=items]:checkbox").prop("checked",check);//只对name=items的复选框操作
+
+				// $(":checkbox").prop("checked",this.checked);//直接赋值也行
+
+			});
+
+			//根据复选框来动态控制全选按钮是否被选中
+			//----第一种：定义一个flag变量，循环复选框，如果有没被选中的，则将flag赋值为false，然后根据flag的值来控制全选按钮的状态
+			/*$("[name=items]:checkbox").on('click', function(event) {
+
+				var flag = true;
+
+				$("[name=items]:checkbox").each(function() {
+
+					if (!this.checked) {
+
+						flag = false;
+
+					}
+
+
+				});
+
+				$("#checkedAll").prop("checked",flag);
+
+			});*/
+
+			//---第二种：判断复选框选中的个数是否与复选框的总个数相等，如果相等，说明全选了，全选按钮选中
+			$("[name=items]:checkbox").on('click', function(event) {
+
+				var $checkbox_ele = $("[name=items]:checkbox"),//所有复选框
+
+					$checked_ele = $("[name=items]:checked");//选中的复选框
+
+				$("#checkedAll").prop("checked",$checked_ele.length == $checkbox_ele.length);
+
+			});
+
+			//弹出选中的复选框的内容
+			$("#send").on('click', function(event) {
+
+				var str = "您选中的是：\r\n";
+
+				$("[name=items]:checkbox:checked").each(function(){
+
+					str += $(this).val()+"\r\n";
+
+				})
+
+				alert(str);
+
+			});
+
+		});
+	</script>
+</body>
+</html>

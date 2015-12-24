@@ -85,9 +85,16 @@
 
 				mouseover:function(){
 
+					this.myTitle = this.title;
+
+					this.title = "";
+
 					var $orig_img = $(this).children("img"),
 
 						tooltip = $("<div class='tooltip'><img src="+$orig_img.attr('data-big')+">"+"<span>"+$orig_img.attr('alt')+"</div>"),
+
+						//使用自定义的myTitle属性值
+						/*tooltip = $("<div class='tooltip'><img src="+$orig_img.attr('data-big')+">"+"<span>"+this.myTitle+"</div>"),*/
 
 						event = event||window.event;
 
@@ -103,6 +110,8 @@
 
 				},
 				mouseout:function(){
+					//使用自定义的属性值  需要重新对title进行赋值
+					this.title=this.myTitle;
 
 					$(".tooltip").remove();
 
